@@ -5,7 +5,7 @@ top_20_vol = '../data/top_20_vol.csv'
 top_20_vol_vwap = '../data/top_20_vwap.csv'
 
 # Read the CSV file
-df = pd.read_csv(historical_file, sep=';', on_bad_lines='skip')
+df = pd.read_csv(historical_file, sep=';', on_bad_lines='warn')
 
 df['CH_TIMESTAMP'] = pd.to_datetime(df['CH_TIMESTAMP'], errors='coerce')
 # Replace '-' with NaN and convert columns to float
