@@ -171,9 +171,9 @@ def test123(from_date, to_date):
         print(i, symbol)
 
 def tests():
-    from_date = '12-06-2024'
-    to_date = '13-06-2024'
-    symbol_name = 'TATAMOTORS'
+    from_date = '01-06-2024'
+    to_date = '14-06-2024'
+    symbol_name = 'FLUOROCHEM'
     cookies = fetch_cookies()
     print(readNSEData(symbol_name, from_date, to_date, cookies))
 
@@ -186,7 +186,7 @@ def main_call():
     
     
     #for historical data
-    weeks_before = 24
+    weeks_before = 2
     days_before = weeks_before * 7  # 24 weeks * 7 days/week
     from_date = (today - timedelta(days=days_before)).strftime('%d-%m-%Y')
     getAllData(from_date,to_date)
@@ -198,5 +198,14 @@ def main_call():
     #from_date = (today - timedelta(days=days_before)).strftime('%d-%m-%Y')
     #getAllData(from_date,to_date, sv_filename)
 
+
+#from_date = '01-06-2024'
+#to_date = '14-06-2024'
+#symbol_name = 'FLUOROCHEM'
+#cookies = fetch_cookies()
+#print(readNSEData(symbol_name, from_date, to_date, cookies))
+
+#stock_file_name = '../data/FLUOROCHEM.csv'
+#stockWiseData(symbol_name, from_date, to_date, stock_file_name)
 
 main_call()
